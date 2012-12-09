@@ -1,0 +1,28 @@
+{
+  "name": "passport-sharepoint",
+  "description": "Library for interacting with SharePoint 2013 OAuth2.",
+  "version": "0.0.1",
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib/passport-sharepoint",
+  "author": {
+    "name": "Thomas Herbst",
+    "email": "thomas.herbst@queport.com"
+  },
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "passport-oauth": "0.1.x",
+    "jwt-simple": "0.1.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/macrauder/node-sharepoint.git"
+  },
+  "engines": { "node": ">= 0.4.0" },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
+  "keywords": ["passport", "oauth", "auth", "authn", "authentication", "sharepoint", "sp2013"]
+}
