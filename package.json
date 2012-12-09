@@ -1,6 +1,6 @@
 {
   "name": "passport-sharepoint",
-  "description": "Library for interacting with SharePoint 2013 OAuth2.",
+  "description": "SharePoint 2013 OAuth2 strategy für Passport and node.js",
   "version": "0.0.1",
   "directories": {
     "lib": "./lib"
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/macrauder/node-sharepoint.git"
+    "url": "http://github.com/QuePort/node-sharepoint.git"
   },
   "engines": { "node": ">= 0.4.0" },
   "licenses": [ {
