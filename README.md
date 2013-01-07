@@ -39,7 +39,7 @@ These AppPart must define the ''StandardTokens'' as the url parameter so that th
     <Content Type="html" Src="https://nodeserver:3000/auth/sharepoint?{StandardTokens}" />
 
 The Node.JS Server you can register as an app at
-[https://sharepoint/_layouts/15/AppRegNew.aspx]
+''https://sharepoint/_layouts/15/AppRegNew.aspx''
 The app id and app secret you specify here is used in our strategy.
 
 #### Authenticate Requests
