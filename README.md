@@ -30,6 +30,18 @@ accepts these credentials and calls `done` providing a user, as well as
       }
     ));
     
+#### Configure SharePoint AppPart
+
+On the SharePoint side you need a provider hosted AppPart that talks to you Node.JS server and you must register your Node.JS server as a app.
+The AppPart you can simply create via the VS2012 AppPart wizard.
+These AppPart must define the ''StandardTokens'' as the url parameter so that the strategy can work.
+
+    <Content Type="html" Src="https://nodeserver:3000/auth/sharepoint?{StandardTokens}" />
+
+The Node.JS Server you can register as an app at
+[https://sharepoint/_layouts/15/AppRegNew.aspx]
+The app id and app secret you specify here is used in our strategy.
+
 #### Authenticate Requests
 
 Use `passport.authenticate()`, specifying the `'sharepoint'` strategy, to
