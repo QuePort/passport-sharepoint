@@ -18,7 +18,7 @@ account using OAuth 2.0.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a app ID, app secret, and callback URL.
 
-    passport.use(new PayPalStrategy({
+    passport.use(new SharePointStrategy({
         clientID: SHAREPOINT_APP_ID ,
     	clientSecret: SHAREPOINT_APP_SECRET ,
         callbackURL: "http://localhost:3000/auth/sharepoint/callback"
@@ -29,6 +29,28 @@ accepts these credentials and calls `done` providing a user, as well as
         });
       }
     ));
+    
+#### Authenticate Requests
+
+Use `passport.authenticate()`, specifying the `'sharepoint'` strategy, to
+authenticate requests.
+
+For example, as route middleware in an [Express](http://expressjs.com/)
+application:
+
+    app.get('/auth/sharepoint',
+      passport.authenticate('sharepoint'),
+      function(req, res){
+        // The request will be redirected to SharePoint for authentication, so
+        // this function will not be called.
+      });
+
+    app.get('/auth/sharepoint/callback', 
+      passport.authenticate('sharepoint', { failureRedirect: '/login' }),
+      function(req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/');
+      });
 
 ## Credits
 
