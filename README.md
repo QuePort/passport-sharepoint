@@ -19,8 +19,8 @@ accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a app ID, app secret, and callback URL.
 
     passport.use(new SharePointStrategy({
-        clientID: SHAREPOINT_APP_ID ,
-    	clientSecret: SHAREPOINT_APP_SECRET ,
+        appId: SHAREPOINT_APP_ID ,
+        appSecret: SHAREPOINT_APP_SECRET ,
         callbackURL: "http://localhost:3000/auth/sharepoint/callback"
       },
       function(accessToken, refreshToken, profile, done) {
