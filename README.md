@@ -42,6 +42,14 @@ The Node.JS Server you can register as an app at
 `https://sharepoint/_layouts/15/AppRegNew.aspx`
 The app id and app secret you specify here is used in our strategy.
 
+#### App Permission Request
+
+To load the user profile from the current user automatically, you should add the following permission request to you app manifest or register manually the permission via https://your-tenant.sharepoint.com/_layouts/15/appinv.aspx
+
+    <AppPermissionRequests AllowAppOnlyPolicy="true" >
+      <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="Read" />
+    </AppPermissionRequests>
+
 #### Authenticate Requests
 
 Use `passport.authenticate()`, specifying the `'sharepoint'` strategy, to
@@ -64,14 +72,6 @@ application:
         res.redirect('/');
       });
       
-## App Permission Request
-
-To load the user profile from the current user automatically, you should add the following permission request to you app manifest or register manually the permission via https://your-tenant.sharepoint.com/_layouts/15/appinv.aspx
-
-    <AppPermissionRequests AllowAppOnlyPolicy="true" >
-      <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="Read" />
-    </AppPermissionRequests>
-
 ## Credits
 
   - [QuePort](https://github.com/QuePort)
