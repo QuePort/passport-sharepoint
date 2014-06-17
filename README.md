@@ -63,6 +63,14 @@ application:
         // Successful authentication, redirect home.
         res.redirect('/');
       });
+      
+## App Permission Request
+
+To load the user profile from the current user automatically, you should add the following permission request to you app manifest or register manually the permission via https://your-tenant.sharepoint.com/_layouts/15/appinv.aspx
+
+    <AppPermissionRequests AllowAppOnlyPolicy="true" >
+      <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="Read" />
+    </AppPermissionRequests>
 
 ## Credits
 
