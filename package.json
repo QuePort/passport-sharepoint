@@ -1,7 +1,7 @@
-{
+﻿{
   "name": "passport-sharepoint",
   "description": "SharePoint 2013 OAuth2 strategy für Passport and node.js",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "directories": {
     "lib": "./lib"
   },
